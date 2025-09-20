@@ -1,7 +1,7 @@
 # 🚀 Roxiler Fullstack Project
 
 A full-stack web application built with **React (frontend)** and **Node.js + Express + PostgreSQL (backend)**.  
-It includes authentication, user roles (**Admin, Owner, User**), light/dark mode support, email welcome system (via Resend API), and role-based dashboards.
+It includes authentication, user roles (**Admin, Owner, User**), light/dark mode support, and role-based dashboards.
 
 ---
 
