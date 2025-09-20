@@ -86,7 +86,7 @@ Open → http://localhost:5173
 
 Admin
     
-<img width="1919" height="854" alt="image" src="https://github.com/user-attachments/assets/938e5e44-8105-42b8-a2c8-a806c7991e19" />
+<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/106c86d5-e63d-4505-a3ef-87f57d5001d0" />
 
 Owner
     
