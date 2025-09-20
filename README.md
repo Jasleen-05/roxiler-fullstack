@@ -21,7 +21,6 @@ roxiler-fullstack/
 │── backend/ # Express + PostgreSQL backend
 │ ├── models/ # Sequelize models (User, Store, Rating)
 │ ├── routes/ # Routes (auth, admin, user, owner)
-│ ├── utils/ # Mailer utility (Resend)
 │ ├── server.js # App entry point
 │ └── ...
 │
@@ -42,6 +41,7 @@ roxiler-fullstack/
 - **Backend:** Node.js, Express, Sequelize ORM  
 - **Database:** PostgreSQL  
 - **Auth:** JWT, bcrypt
+- **API Testing:** Postman
 
 ---
 
@@ -84,8 +84,19 @@ Open → http://localhost:5173
 
 ## 📸 Screenshots
 
+Admin
+<img width="1919" height="854" alt="image" src="https://github.com/user-attachments/assets/938e5e44-8105-42b8-a2c8-a806c7991e19" />
+
+Owner
+<img width="1894" height="829" alt="image" src="https://github.com/user-attachments/assets/54908df0-9f27-415f-bcd3-abbd4ee33f17" />
+
+User
+<img width="1919" height="822" alt="image" src="https://github.com/user-attachments/assets/b5198701-68a7-445b-b5de-ef7fb6e5815c" />
+
+
+
 ---
 
-## 👩‍💻 Author
-Jasleen Kaur Matharoo      
-For Queries contact- jasleen.matharoo@gmail.com
+##👩‍💻 Author
+Jasleen Kaur Matharoo
+📧 For queries: jasleen.matharoo@gmail.com
