@@ -102,4 +102,4 @@ User
 
 ##  👩‍💻 Author
 Jasleen Kaur Matharoo      
-📧 For queries: jasleen.matharoo@gmail.com
+📧 For queries: jasleen.matharoo@s.amity.edu
