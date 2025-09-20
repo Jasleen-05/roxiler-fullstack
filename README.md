@@ -16,6 +16,7 @@ It includes authentication, user roles (**Admin, Owner, User**), light/dark mode
 ---
 
 ## 📂 Project Structure
+```
 roxiler-fullstack/
 │── backend/ # Express + PostgreSQL backend
 │ ├── models/ # Sequelize models (User, Store, Rating)
@@ -32,6 +33,7 @@ roxiler-fullstack/
 │ │ └── ...
 │
 └── README.md
+```
 
 ---
 
@@ -86,5 +88,5 @@ Open → http://localhost:5173
 ---
 
 ## 👩‍💻 Author
-Jasleen Kaur Matharoo
+Jasleen Kaur Matharoo      
 For Queries contact- jasleen.matharoo@gmail.com
