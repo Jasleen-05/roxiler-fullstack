@@ -47,38 +47,99 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-black"}`}>
+    <div
+      className={`min-h-screen ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-black"
+      }`}
+    >
       {/* ✅ Navbar */}
       <nav className="bg-gradient-to-r from-blue-600 to-purple-600 shadow-md p-4 flex justify-between items-center">
         <h1 className="text-white text-2xl font-bold">🚀 Roxiler App</h1>
         <div className="space-x-4 flex items-center">
-          <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/">Home</Link>
-          <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/about">About</Link>
-          <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/stores">Stores</Link>
+          <Link
+            className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+            to="/about"
+          >
+            About
+          </Link>
+
+          {/* ✅ Show Stores only when logged in */}
+          {user && (
+            <Link
+              className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+              to="/stores"
+            >
+              Stores
+            </Link>
+          )}
 
           {!user ? (
             <>
-              <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/login">Login</Link>
-              <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/signup">Signup</Link>
+              <Link
+                className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                to="/login"
+              >
+                Login
+              </Link>
+              <Link
+                className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                to="/signup"
+              >
+                Signup
+              </Link>
             </>
           ) : (
             <>
               {user.role === "admin" && (
-                <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/admin">Admin</Link>
+                <Link
+                  className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                  to="/admin"
+                >
+                  Admin
+                </Link>
               )}
               {user.role === "owner" && (
                 <>
-                  <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/owner">Owner</Link>
-                  <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/owner/profile">Profile</Link>
+                  <Link
+                    className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                    to="/owner"
+                  >
+                    Owner
+                  </Link>
+                  <Link
+                    className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                    to="/owner/profile"
+                  >
+                    Profile
+                  </Link>
                 </>
               )}
               {user.role === "user" && (
                 <>
-                  <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/user">User</Link>
-                  <Link className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg" to="/profile">Profile</Link>
+                  <Link
+                    className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                    to="/user"
+                  >
+                    User
+                  </Link>
+                  <Link
+                    className="px-3 py-2 text-white hover:bg-white hover:text-blue-600 rounded-lg"
+                    to="/profile"
+                  >
+                    Profile
+                  </Link>
                 </>
               )}
-              <button onClick={handleLogout} className="px-3 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
+              <button
+                onClick={handleLogout}
+                className="px-3 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+              >
                 Logout
               </button>
             </>
@@ -104,13 +165,48 @@ export default function App() {
           <Route path="/stores" element={<StoreList />} />
 
           {/* Dashboards */}
-          <Route path="/admin" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
-          <Route path="/user" element={<ProtectedRoute role="user"><UserDashboard /></ProtectedRoute>} />
-          <Route path="/owner" element={<ProtectedRoute role="owner"><OwnerDashboard /></ProtectedRoute>} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute role="admin">
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/user"
+            element={
+              <ProtectedRoute role="user">
+                <UserDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/owner"
+            element={
+              <ProtectedRoute role="owner">
+                <OwnerDashboard />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Profiles */}
-          <Route path="/profile" element={<ProtectedRoute role="user"><UserProfile /></ProtectedRoute>} />
-          <Route path="/owner/profile" element={<ProtectedRoute role="owner"><OwnerProfile /></ProtectedRoute>} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute role="user">
+                <UserProfile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/owner/profile"
+            element={
+              <ProtectedRoute role="owner">
+                <OwnerProfile />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
     </div>
