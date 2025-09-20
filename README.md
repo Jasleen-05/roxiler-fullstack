@@ -41,8 +41,7 @@ roxiler-fullstack/
 - **Frontend:** React, Vite, Tailwind CSS  
 - **Backend:** Node.js, Express, Sequelize ORM  
 - **Database:** PostgreSQL  
-- **Auth:** JWT, bcrypt  
-- **Email Service:** Resend API  
+- **Auth:** JWT, bcrypt
 
 ---
 
